@@ -4,8 +4,9 @@
 
 ## Pastabos
 
-- Truksta cmake failo
-- Atsitiktiniu skaiciu generavimas nelabai atsitiktinis, bet cia panasu, kad g++ kliurka.
+- Truksta cmake failo (ATSIRADO)
+- Atsitiktiniu skaiciu generavimas nelabai atsitiktinis, bet cia panasu, kad g++ kliurka. 
+
 
 ## Pagyrimai
 
