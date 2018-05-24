@@ -2,14 +2,14 @@
 
 ## Cool dalykai
 
-```
+```cpp
     using namespace std::chrono;
     std::random_device rseed;
     std::mt19937 gen(rseed()*1000*static_cast<long unsigned int>(std::chrono::high_resolution_clock::now().
     time_since_epoch().count()));
     std::uniform_int_distribution<int> dst(1,10);
 ```            
-```
+```cpp
 void nuskaitymas_vec(vector<studentas>& S, std::ifstream &duomenys, int paz_kiekis){
     string var, pav;
     vector <int> paz (paz_kiekis, 0);
