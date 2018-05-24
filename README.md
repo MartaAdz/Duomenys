@@ -1,5 +1,38 @@
 # Duomenys
 
+## Cool dalykai
+
+```
+    using namespace std::chrono;
+    std::random_device rseed;
+    std::mt19937 gen(rseed()*1000*static_cast<long unsigned int>(std::chrono::high_resolution_clock::now().
+    time_since_epoch().count()));
+    std::uniform_int_distribution<int> dst(1,10);
+```            
+```
+void nuskaitymas_vec(vector<studentas>& S, std::ifstream &duomenys, int paz_kiekis){
+    string var, pav;
+    vector <int> paz (paz_kiekis, 0);
+    int egz;
+
+    while(!duomenys.eof())
+    {
+        duomenys >> var >> pav;
+        for(int i=0; i<paz_kiekis; i++) duomenys>> paz[i];
+        duomenys >> egz;
+        studentas stud;
+        stud.vardas=var;
+        stud.pavarde=pav;
+        for (auto i=0; i!=paz_kiekis; i++) stud.pazymiai.push_back(paz[i]);
+        stud.egzaminas=egz;
+        stud.galBalasVid=vidurkis(stud);
+        stud.galBalasMed=mediana(stud);
+
+        S.push_back(stud);
+    }
+ }
+```
+
 # Vertinimas
 
 ## Pastabos
